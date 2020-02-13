@@ -1,0 +1,122 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>想说给二笨的</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        } 
+<audio src="/music1.mp3" autoplay="autoplay">
+    </style>
+    <link href="style/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="style/jquery.js"></script>
+    <script type="text/javascript" src="style/garden.js"></script>
+    <script type="text/javascript" src="style/functions.js"></script>
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <p><span class="comments">/**</span><br />
+                  <span class="space"/><span class="comments">*小会，有些话，我想跟你说</span><br />
+                  <span class="space"/><span class="comments">* 今天呢是2.14情人节，特意写了这个送给你.</span><br />
+                  <span class="space"/><span class="comments">*还记得你送我的那张唯一的贺卡吗</span><br />
+                  <span class="space"/><span class="comments">*我想我应该是会永远贪恋着你的风情吧，这辈子。</span><br />
+                <br />
+                <span class="comments">// 这些天很想你</span><br />
+                </p>
+                <p><span class="comments">// 天各一方的时间越来越长,我的思念也越来越深。</span><br />
+                </p>
+                <p><span class="comments">// 还有1个月时间，感觉好漫长。。</span><br />
+                <br />
+                <span class="comments">// 心里有很多惆怅、寂寞要向你倾诉。</span><br />
+                </p>
+                <p><span class="comments">// 。。。想早点见到你</span><br />
+                  <br />
+                <span class="comments">// 其实我觉得我的思绪已经飞到你的身边去了</span></p>
+                <p><span class="comments">// 保留一个最浪漫的故事，给你一声祝福，</span></p>
+                <p><span class="comments">// 一份思恋，爱你直到永远！ 小会，理解我吗？</span><br />
+                  <br />
+                <span class="comments">//宝贝情人节快乐~</span><br />
+                </p>
+
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+<center>
+💕💕💕💕💕
+</center>
+<p><br /></p>
+<center>
+						情人节快乐
+
+
+
+                        
+                        <div id="elapseClock" style="display:none"></div>
+                        <a href='index2.html' id="accept">小会，点击这里</a>
+                    </div>
+</center>
+<center>						
+                    <div id="loveu">					
+                        爱你<br/>
+                        <div class="signature">- </div>
+                    </div>
+</center>					
+				     </div>
+				</div>
+			</div>
+</div>
+	<div class="bg1">	
+		<div class="main">
+			<footer style="line-height:20px">
+                <div id="copyright">
+                     <a href='' target="_blank"></a> 
+                     
+                </object>
+                </div>
+		</div>
+	</div>
+</div>
+
+
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                adjustWordsPosition();
+                startHeartAnimation();
+            }, 10000);
+            
+            $("#accept").click(function(){
+                $(this).hide();
+                $("#elapseClock").show();
+                var together = new Date();
+                timeElapse(together);
+                setInterval(function () {
+                    timeElapse(together);
+                }, 500);
+            })
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
+    <audio id="bgmMusic" src="http://qzone.haoduoge.com/music/C2C3F0LSXH4D771253124A26CF9C71C939B2A.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
+</html>
